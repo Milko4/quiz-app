@@ -54,9 +54,11 @@ public class Quiz extends JFrame implements ActionListener {
         questions[1][3] = "1963";
         questions[1][4] = "1964";
 
-        questions[2][0] = "L'Algérie était une colonie française.";
-        questions[2][1] = "oui";
-        questions[2][2] = "non";
+        questions[2][0] = "De combien de départements était constituée l'Algérie française en 1957?";
+        questions[2][1] = "1";
+        questions[2][2] = "3";
+        questions[2][2] = "4";
+        questions[2][2] = "8";
         
 
         questions[3][0] = "La guerre d'Algérie aboutira à...";
@@ -65,18 +67,20 @@ public class Quiz extends JFrame implements ActionListener {
         questions[3][3] = "L'indépendance de l'Algérie";
         
 
-        questions[4][0] = "Les accords d'Évian mettent fin à la guerre d'Algérie.";
-        questions[4][1] = "vrai";
-        questions[4][2] = "faux";
+        questions[4][0] = "Comment se nommait les populations européennes installées en Algérie?";
+        questions[4][1] = "colone";
+        questions[4][2] = "pied noire";
+        questions[2][2] = "colamarian";
+        questions[2][2] = "creole";
        
 
       
         
         answers[0][1] = "1954";
         answers[1][1] = "1962";
-        answers[2][1] = "vrai";
+        answers[2][1] = "4";
         answers[3][1] = "L'indépendance de l'Algérie";
-        answers[4][1] = "vrai";
+        answers[4][1] = "colone";
        
         
         opt1 = new JRadioButton();
