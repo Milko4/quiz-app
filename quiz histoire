@@ -57,8 +57,8 @@ public class Quiz extends JFrame implements ActionListener {
         questions[2][0] = "De combien de départements était constituée l'Algérie française en 1957?";
         questions[2][1] = "1";
         questions[2][2] = "3";
-        questions[2][2] = "4";
-        questions[2][2] = "8";
+        questions[2][3] = "4";
+        questions[2][4] = "8";
         
 
         questions[3][0] = "La guerre d'Algérie aboutira à...";
@@ -70,8 +70,8 @@ public class Quiz extends JFrame implements ActionListener {
         questions[4][0] = "Comment se nommait les populations européennes installées en Algérie?";
         questions[4][1] = "colone";
         questions[4][2] = "pied noire";
-        questions[2][2] = "colamarian";
-        questions[2][2] = "creole";
+        questions[4][3] = "colamarian";
+        questions[4][4] = "creole";
        
 
       
