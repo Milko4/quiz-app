@@ -1,0 +1,58 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class QuizInterface extends JFrame {
+    public QuizInterface() {
+        // Configuration de la fenêtre
+        setTitle("Quiz de Sélection");
+        setSize(400, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        // Création des composants
+        JButton facileButton = new JButton("Facile");
+        JButton difficileButton = new JButton("Difficile");
+        JLabel selectionLabel = new JLabel("Sélectionnez le niveau de difficulté:");
+        JPanel buttonPanel = new JPanel();
+
+        // Configuration du gestionnaire de disposition pour les boutons
+        buttonPanel.setLayout(new GridLayout(1, 2, 10, 10));
+
+        // Ajout des boutons au panel
+        buttonPanel.add(facileButton);
+        buttonPanel.add(difficileButton);
+
+        // Configuration du gestionnaire de disposition principal
+        setLayout(new BorderLayout());
+
+        // Ajout des composants à la fenêtre
+        add(selectionLabel, BorderLayout.NORTH);
+        add(buttonPanel, BorderLayout.CENTER);
+
+        // Ajout des écouteurs d'événements
+        facileButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(QuizInterface.this, "Vous avez sélectionné Facile !");
+            }
+        });
+
+        difficileButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(QuizInterface.this, "Vous avez sélectionné Difficile !");
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new QuizInterface().setVisible(true);
+            }
+        });
+    }
+}
