@@ -1,1 +1,50 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+public class QuizApp {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });
+    }
+
+    private static void createAndShowGUI() {
+        JFrame frame = new JFrame("Quiz App");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new BorderLayout());
+
+        JLabel questionLabel = new JLabel("Quel est le niveau de difficulté du quiz ?");
+        mainPanel.add(questionLabel, BorderLayout.NORTH);
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new GridLayout(1, 2));
+
+        JButton easyButton = new JButton("Facil");
+        easyButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(frame, "Vous avez choisi le niveau facile !");
+            }
+        });
+        buttonPanel.add(easyButton);
+
+        JButton hardButton = new JButton("Difficile");
+        hardButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(frame, "Vous avez choisi le niveau difficile !");
+            }
+        });
+        buttonPanel.add(hardButton);
+
+        mainPanel.add(buttonPanel, BorderLayout.CENTER);
+
+        frame.getContentPane().add(mainPanel);
+        frame.setVisible(true);
+    }
+}
